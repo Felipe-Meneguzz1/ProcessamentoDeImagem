@@ -1,0 +1,40 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lipem\\OneDrive\\Documentos\\GitHub\\ProcessamentoDeImagem\\ProcessamentoImagemTrabalhoFinal\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A0B99286-7D90-41C3-9E79-60A28BE082F1}|ProcessamentoImagemTrabalhoFinal\\ProcessamentoImagemTrabalhoFinal.csproj|c:\\users\\lipem\\onedrive\\documentos\\github\\processamentodeimagem\\processamentoimagemtrabalhofinal\\processamentoimagemtrabalhofinal\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A0B99286-7D90-41C3-9E79-60A28BE082F1}|ProcessamentoImagemTrabalhoFinal\\ProcessamentoImagemTrabalhoFinal.csproj|solutionrelative:processamentoimagemtrabalhofinal\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\lipem\\OneDrive\\Documentos\\GitHub\\ProcessamentoDeImagem\\ProcessamentoImagemTrabalhoFinal\\ProcessamentoImagemTrabalhoFinal\\Form1.cs",
+              "RelativeDocumentMoniker": "ProcessamentoImagemTrabalhoFinal\\Form1.cs",
+              "ToolTip": "C:\\Users\\lipem\\OneDrive\\Documentos\\GitHub\\ProcessamentoDeImagem\\ProcessamentoImagemTrabalhoFinal\\ProcessamentoImagemTrabalhoFinal\\Form1.cs [Design]",
+              "RelativeToolTip": "ProcessamentoImagemTrabalhoFinal\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T23:26:47.35Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
