@@ -23,12 +23,12 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.TabLabel = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.bntDown = new System.Windows.Forms.Button();
@@ -115,10 +115,11 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.button10 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.btn_prewitt = new System.Windows.Forms.Button();
             this.bnt_sobel = new System.Windows.Forms.Button();
             this.bnt_laplaciano = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox = new System.Windows.Forms.GroupBox();
             this.SigmaTextBox = new System.Windows.Forms.TextBox();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -134,7 +135,13 @@
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
             this.TabLabel.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBrilhoMenos)).BeginInit();
@@ -174,11 +181,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             this.tabPage6.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOrdem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabLabel
@@ -1090,32 +1098,32 @@
             // 
             // chart2
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart2.Legends.Add(legend3);
+            chartArea7.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chart2.Legends.Add(legend7);
             this.chart2.Location = new System.Drawing.Point(326, 373);
             this.chart2.Name = "chart2";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart2.Series.Add(series3);
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.chart2.Series.Add(series7);
             this.chart2.Size = new System.Drawing.Size(795, 283);
             this.chart2.TabIndex = 26;
             this.chart2.Text = "chart2";
             // 
             // chart1
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
+            chartArea8.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chart1.Legends.Add(legend8);
             this.chart1.Location = new System.Drawing.Point(526, 42);
             this.chart1.Name = "chart1";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
+            series8.ChartArea = "ChartArea1";
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.chart1.Series.Add(series8);
             this.chart1.Size = new System.Drawing.Size(600, 244);
             this.chart1.TabIndex = 25;
             this.chart1.Text = "chart1";
@@ -1155,9 +1163,10 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.groupBox3);
             this.tabPage6.Controls.Add(this.button10);
             this.tabPage6.Controls.Add(this.groupBox4);
-            this.tabPage6.Controls.Add(this.groupBox3);
+            this.tabPage6.Controls.Add(this.groupBox);
             this.tabPage6.Controls.Add(this.pg_bnt_carregar_realce);
             this.tabPage6.Controls.Add(this.pictureBox21);
             this.tabPage6.Controls.Add(this.pictureBox20);
@@ -1186,12 +1195,25 @@
             this.groupBox4.Controls.Add(this.btn_prewitt);
             this.groupBox4.Controls.Add(this.bnt_sobel);
             this.groupBox4.Controls.Add(this.bnt_laplaciano);
-            this.groupBox4.Location = new System.Drawing.Point(386, 236);
+            this.groupBox4.Location = new System.Drawing.Point(386, 407);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(264, 113);
             this.groupBox4.TabIndex = 35;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "groupBox4";
+            this.groupBox4.Text = "Passa Alta";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "3x3, padrao",
+            "3x3, 8 viz"});
+            this.comboBox2.Location = new System.Drawing.Point(136, 70);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.comboBox2.Size = new System.Drawing.Size(114, 24);
+            this.comboBox2.TabIndex = 37;
             // 
             // btn_prewitt
             // 
@@ -1223,24 +1245,24 @@
             this.bnt_laplaciano.UseVisualStyleBackColor = true;
             this.bnt_laplaciano.Click += new System.EventHandler(this.bnt_laplaciano_Click);
             // 
-            // groupBox3
+            // groupBox
             // 
-            this.groupBox3.Controls.Add(this.SigmaTextBox);
-            this.groupBox3.Controls.Add(this.button9);
-            this.groupBox3.Controls.Add(this.button8);
-            this.groupBox3.Controls.Add(this.numericUpDownOrdem);
-            this.groupBox3.Controls.Add(this.bnt_Ordem);
-            this.groupBox3.Controls.Add(this.pg_bnt_remove);
-            this.groupBox3.Controls.Add(this.RealceCombobox);
-            this.groupBox3.Controls.Add(this.Pg_bnt_Mean);
-            this.groupBox3.Controls.Add(this.Pg_bnt_Min);
-            this.groupBox3.Controls.Add(this.Pg_bnt_Max);
-            this.groupBox3.Location = new System.Drawing.Point(386, 23);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(381, 195);
-            this.groupBox3.TabIndex = 34;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.groupBox.Controls.Add(this.SigmaTextBox);
+            this.groupBox.Controls.Add(this.button9);
+            this.groupBox.Controls.Add(this.button8);
+            this.groupBox.Controls.Add(this.numericUpDownOrdem);
+            this.groupBox.Controls.Add(this.bnt_Ordem);
+            this.groupBox.Controls.Add(this.pg_bnt_remove);
+            this.groupBox.Controls.Add(this.RealceCombobox);
+            this.groupBox.Controls.Add(this.Pg_bnt_Mean);
+            this.groupBox.Controls.Add(this.Pg_bnt_Min);
+            this.groupBox.Controls.Add(this.Pg_bnt_Max);
+            this.groupBox.Location = new System.Drawing.Point(386, 23);
+            this.groupBox.Name = "groupBox";
+            this.groupBox.Size = new System.Drawing.Size(381, 195);
+            this.groupBox.TabIndex = 34;
+            this.groupBox.TabStop = false;
+            this.groupBox.Text = "Passa Baixa";
             // 
             // SigmaTextBox
             // 
@@ -1391,18 +1413,80 @@
             this.pictureBox15.TabIndex = 19;
             this.pictureBox15.TabStop = false;
             // 
-            // comboBox2
+            // groupBox3
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "3x3, padrao",
-            "3x3, 8 viz"});
-            this.comboBox2.Location = new System.Drawing.Point(136, 70);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBox2.Size = new System.Drawing.Size(114, 24);
-            this.comboBox2.TabIndex = 37;
+            this.groupBox3.Controls.Add(this.button15);
+            this.groupBox3.Controls.Add(this.button14);
+            this.groupBox3.Controls.Add(this.button13);
+            this.groupBox3.Controls.Add(this.button12);
+            this.groupBox3.Controls.Add(this.button11);
+            this.groupBox3.Controls.Add(this.comboBox3);
+            this.groupBox3.Location = new System.Drawing.Point(386, 238);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(381, 144);
+            this.groupBox3.TabIndex = 38;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Morfologicas";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Elemento estruturante quadrado",
+            "Quadrado maior",
+            "Elemento estruturante linear vertical",
+            "Elemento estruturante retangular"});
+            this.comboBox3.Location = new System.Drawing.Point(70, 21);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.comboBox3.Size = new System.Drawing.Size(253, 24);
+            this.comboBox3.TabIndex = 34;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(4, 51);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(120, 36);
+            this.button11.TabIndex = 34;
+            this.button11.Text = "Dilatação";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(130, 95);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(120, 36);
+            this.button12.TabIndex = 35;
+            this.button12.Text = "Contorno ";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(130, 51);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(120, 36);
+            this.button13.TabIndex = 36;
+            this.button13.Text = "Erosão";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(0, 95);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(120, 36);
+            this.button14.TabIndex = 37;
+            this.button14.Text = "Abertura";
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(254, 51);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(120, 36);
+            this.button15.TabIndex = 38;
+            this.button15.Text = "Fechamento";
+            this.button15.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -1459,12 +1543,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.groupBox.ResumeLayout(false);
+            this.groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOrdem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1570,13 +1655,20 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox SigmaTextBox;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btn_prewitt;
         private System.Windows.Forms.Button bnt_sobel;
         private System.Windows.Forms.Button bnt_laplaciano;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button15;
     }
 }
 
