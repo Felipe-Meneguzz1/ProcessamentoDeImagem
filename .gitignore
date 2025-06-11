@@ -1,0 +1,21 @@
+# Pastas e arquivos gerados automaticamente pelo Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Arquivos temporários e binários
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+
+# Logs e outros arquivos temporários
+*.log
+*.tmp
+*.cache
+
+# Configurações locais
+*.vscode/

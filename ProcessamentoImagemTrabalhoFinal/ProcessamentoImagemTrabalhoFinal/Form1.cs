@@ -1043,6 +1043,171 @@ namespace ProcessamentoImagemTrabalhoFinal
             }
         }
 
+        private int[,] ObterElementoEstruturante() {
+            string tipo = comboBox3.Text;
+            switch (tipo) {
+                case "Elemento estruturante quadrado":
+                return new int[,]
+                {
+                { 1, 1, 1 },
+                { 1, 1, 1 },
+                { 1, 1, 1 }
+                };
+
+                case "Quadrado maior":
+                return new int[,]
+                {
+                { 1, 1, 1, 1, 1 },
+                { 1, 1, 1, 1, 1 },
+                { 1, 1, 1, 1, 1 },
+                { 1, 1, 1, 1, 1 },
+                { 1, 1, 1, 1, 1 }
+                };
+
+                case "Elemento estruturante linear vertical":
+                return new int[,]
+                {
+                { 1 },
+                { 1 },
+                { 1 }
+                };
+
+                case "Elemento estruturante retangular":
+                return new int[,]
+                {
+                { 1, 1, 1, 1 },
+                { 1, 1, 1, 1 }
+                };
+
+                default:
+                MessageBox.Show("Selecione um elemento estruturante válido no ComboBox3.");
+                return null;
+            }
+        }
+
+        private void erosao() {
+            Bitmap image1 = (Bitmap)pictureBox20.Image;
+            Bitmap image2 = new Bitmap(image1.Width, image1.Height);
+
+            int[,] elemento = ObterElementoEstruturante();
+            if (elemento == null) return;
+
+            int w = elemento.GetLength(0);
+            int h = elemento.GetLength(1);
+            int offsetX = w / 2;
+            int offsetY = h / 2;
+
+            for (int x = offsetX; x < image1.Width - offsetX; x++) {
+                for (int y = offsetY; y < image1.Height - offsetY; y++) {
+                    bool erodir = false;
+
+                    for (int i = 0; i < w && !erodir; i++) {
+                        for (int j = 0; j < h && !erodir; j++) {
+                            if (elemento[i, j] == 1) {
+                                Color pixel = image1.GetPixel(x + i - offsetX, y + j - offsetY);
+                                int gray = (pixel.R + pixel.G + pixel.B) / 3;
+                                if (gray < 128)
+                                    erodir = true;
+                            }
+                        }
+                    }
+
+                    image2.SetPixel(x, y, erodir ? Color.Black : Color.White);
+                }
+            }
+
+            pictureBox21.Image = image2;
+        }
+
+        private void dilatacao() {
+            Bitmap image1 = (Bitmap)pictureBox20.Image;
+            Bitmap image2 = new Bitmap(image1.Width, image1.Height);
+
+            int[,] elemento = ObterElementoEstruturante();
+            if (elemento == null) return;
+
+            int w = elemento.GetLength(0);
+            int h = elemento.GetLength(1);
+            int offsetX = w / 2;
+            int offsetY = h / 2;
+
+            for (int x = offsetX; x < image1.Width - offsetX; x++) {
+                for (int y = offsetY; y < image1.Height - offsetY; y++) {
+                    bool dilatar = false;
+
+                    for (int i = 0; i < w && !dilatar; i++) {
+                        for (int j = 0; j < h && !dilatar; j++) {
+                            if (elemento[i, j] == 1) {
+                                Color pixel = image1.GetPixel(x + i - offsetX, y + j - offsetY);
+                                int gray = (pixel.R + pixel.G + pixel.B) / 3;
+                                if (gray >= 128)
+                                    dilatar = true;
+                            }
+                        }
+                    }
+
+                    image2.SetPixel(x, y, dilatar ? Color.White : Color.Black);
+                }
+            }
+
+            pictureBox21.Image = image2;
+        }
+
+        private void abertura() {
+            Bitmap original = (Bitmap)pictureBox20.Image;
+            Bitmap erodida = new Bitmap(original);
+            Bitmap dilatada = new Bitmap(original);
+
+            pictureBox20.Image = original;
+            erosao(); // Usa pictureBox20 como base e joga em pictureBox21
+            erodida = (Bitmap)pictureBox21.Image;
+
+            pictureBox20.Image = erodida;
+            dilatacao(); // Usa pictureBox20 como base (erodida) e joga em pictureBox21
+            dilatada = (Bitmap)pictureBox21.Image;
+
+            pictureBox20.Image = original;
+            pictureBox21.Image = dilatada;
+        }
+
+        private void fechamento() {
+            Bitmap original = (Bitmap)pictureBox20.Image;
+            Bitmap dilatada = new Bitmap(original);
+            Bitmap erodida = new Bitmap(original);
+
+            pictureBox20.Image = original;
+            dilatacao(); // Usa pictureBox20 como base e joga em pictureBox21
+            dilatada = (Bitmap)pictureBox21.Image;
+
+            pictureBox20.Image = dilatada;
+            erosao(); // Usa pictureBox20 como base (dilatada) e joga em pictureBox21
+            erodida = (Bitmap)pictureBox21.Image;
+
+            pictureBox20.Image = original;
+            pictureBox21.Image = erodida;
+        }
+
+        private void contorno() {
+            Bitmap original = (Bitmap)pictureBox20.Image;
+            erosao();
+            Bitmap erodida = (Bitmap)pictureBox21.Image;
+            Bitmap resultado = new Bitmap(original.Width, original.Height);
+
+            for (int x = 0; x < original.Width; x++) {
+                for (int y = 0; y < original.Height; y++) {
+                    int originalGray = (original.GetPixel(x, y).R + original.GetPixel(x, y).G + original.GetPixel(x, y).B) / 3;
+                    int erodidaGray = (erodida.GetPixel(x, y).R + erodida.GetPixel(x, y).G + erodida.GetPixel(x, y).B) / 3;
+
+                    int contorno = originalGray - erodidaGray;
+                    contorno = Math.Max(0, Math.Min(255, contorno));
+                    resultado.SetPixel(x, y, Color.FromArgb(contorno, contorno, contorno));
+                }
+            }
+
+            pictureBox21.Image = resultado;
+        }
+
+
         private void bntPlus_Click(object sender, EventArgs e) {
             IncreaseBrightnessRGB();
         }
@@ -1366,6 +1531,30 @@ namespace ProcessamentoImagemTrabalhoFinal
 
         private void bnt_laplaciano_Click(object sender, EventArgs e) {
             laplaciano();
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e) {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e) {
+            dilatacao();
+        }
+
+        private void button13_Click(object sender, EventArgs e) {
+            erosao();
+        }
+
+        private void button15_Click(object sender, EventArgs e) {
+            fechamento();
+        }
+
+        private void button14_Click(object sender, EventArgs e) {
+            abertura();
+        }
+
+        private void button12_Click(object sender, EventArgs e) {
+            contorno();
         }
     }
 }
