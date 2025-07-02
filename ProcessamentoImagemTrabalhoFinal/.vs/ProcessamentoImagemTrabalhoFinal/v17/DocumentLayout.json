@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -28,15 +28,11 @@
               "RelativeDocumentMoniker": "ProcessamentoImagemTrabalhoFinal\\Form1.cs",
               "ToolTip": "C:\\Users\\lipem\\OneDrive\\Documentos\\GitHub\\ProcessamentoDeImagem\\ProcessamentoImagemTrabalhoFinal\\ProcessamentoImagemTrabalhoFinal\\Form1.cs*",
               "RelativeToolTip": "ProcessamentoImagemTrabalhoFinal\\Form1.cs*",
-              "ViewState": "AgIAAAQGAAAAAAAAAAAnwBQGAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAPkGAAAAAAAAAAAAAAkHAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-12T23:40:21.094Z",
               "IsPinned": true,
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}"
             },
             {
               "$type": "Document",
@@ -48,7 +44,12 @@
               "RelativeToolTip": "ProcessamentoImagemTrabalhoFinal\\Form1.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-12T23:26:47.35Z",
+              "IsPinned": true,
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}"
             }
           ]
         }
